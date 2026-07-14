@@ -30,11 +30,11 @@ body {
   color: black;
 }
 
-.detailsBox:active {
-  color: blue;
-
+.detailsBox:focus {
+  border: 2px solid blue;
 }
 
 .summaryBox:hover {
   cursor: pointer;
+  background-color: rgb(0 0 0 / 0.3);
 }

@@ -1,20 +1,14 @@
 module Main exposing (main)
 
 import Browser
+import Components.Accordion.V1 exposing (AccordionType, viewAccordion)
 import Html exposing (Html, a, details, div, h1, p, summary, text)
 import Html.Attributes exposing (class, href)
 
 
-type alias ShowSummary =
-    { text : String
-    , isATag : Maybe Bool
-    , location : Maybe String
-    }
-
-
-summaryList : List ShowSummary
+summaryList : List AccordionType
 summaryList =
-    [ { text = "Join the discord!"
+    [ { title = "Join the discord!"
       , isATag = Just True
       , location = Just "https://discord.gg/9w9x7d3"
       }
@@ -46,30 +40,6 @@ update msg model =
             ( model, Cmd.none )
 
 
-showSummary : ShowSummary -> Html Msg
-showSummary =
-    \l ->
-        case l.isATag of
-            Just True ->
-                case l.location of
-                    Just location ->
-                        a [ href location ] [ text l.text ]
-
-                    Nothing ->
-                        text l.text
-
-            Just False ->
-                text l.text
-
-            Nothing ->
-                text l.text
-
-
-viewShowSummary : List ShowSummary -> Html Msg
-viewShowSummary items =
-    div [] (List.map showSummary items)
-
-
 view : Model -> Html Msg
 view model =
     div [ class "page" ]
@@ -77,6 +47,6 @@ view model =
         , p [] [ text "" ]
         , details [ class "detailsBox" ]
             [ summary [ class "summaryBox" ] [ text "Discord" ]
-            , viewShowSummary summaryList
+            , viewAccordion summaryList
             ]
         ]

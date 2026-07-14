@@ -5194,7 +5194,7 @@ var $author$project$Main$summaryList = _List_fromArray(
 		{
 		isATag: $elm$core$Maybe$Just(true),
 		location: $elm$core$Maybe$Just('https://discord.gg/9w9x7d3'),
-		text: 'Join the discord!'
+		title: 'Join the discord!'
 	}
 	]);
 var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
@@ -5206,7 +5206,7 @@ var $elm$html$Html$Attributes$href = function (url) {
 		'href',
 		_VirtualDom_noJavaScriptUri(url));
 };
-var $author$project$Main$showSummary = function (l) {
+var $author$project$Components$Accordion$V1$showAccordion = function (l) {
 	var _v0 = l.isATag;
 	if (_v0.$ === 'Just') {
 		if (_v0.a) {
@@ -5221,23 +5221,26 @@ var $author$project$Main$showSummary = function (l) {
 						]),
 					_List_fromArray(
 						[
-							$elm$html$Html$text(l.text)
+							$elm$html$Html$text(l.title)
 						]));
 			} else {
-				return $elm$html$Html$text(l.text);
+				return $elm$html$Html$text(l.title);
 			}
 		} else {
-			return $elm$html$Html$text(l.text);
+			return $elm$html$Html$text(l.title);
 		}
 	} else {
-		return $elm$html$Html$text(l.text);
+		return $elm$html$Html$text(l.title);
 	}
 };
-var $author$project$Main$viewShowSummary = function (items) {
+var $author$project$Components$Accordion$V1$viewAccordion = function (items) {
 	return A2(
 		$elm$html$Html$div,
-		_List_Nil,
-		A2($elm$core$List$map, $author$project$Main$showSummary, items));
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$class('accordion')
+			]),
+		A2($elm$core$List$map, $author$project$Components$Accordion$V1$showAccordion, items));
 };
 var $author$project$Main$view = function (model) {
 	return A2(
@@ -5280,7 +5283,7 @@ var $author$project$Main$view = function (model) {
 							[
 								$elm$html$Html$text('Discord')
 							])),
-						$author$project$Main$viewShowSummary($author$project$Main$summaryList)
+						$author$project$Components$Accordion$V1$viewAccordion($author$project$Main$summaryList)
 					]))
 			]));
 };
