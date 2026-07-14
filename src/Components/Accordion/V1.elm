@@ -26,11 +26,6 @@ getContent maybeContent =
             ""
 
 
-
--- class "detailsBox"
--- class "summaryBox"
-
-
 accordionLogic : AccordionType -> Html msg
 accordionLogic l =
     details []

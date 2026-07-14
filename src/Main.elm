@@ -2,8 +2,13 @@ module Main exposing (main)
 
 import Browser
 import Components.Accordion.V1 exposing (AccordionType, viewAccordion)
-import Html exposing (Html, a, details, div, h1, p, summary, text)
-import Html.Attributes exposing (class, href)
+import Components.Cards.Base.V1 exposing (baseCard)
+import Html exposing (Html, div, h1, p, text)
+import Html.Attributes exposing (class)
+
+
+
+{- | @author: TuringProblem: 20260714 : 1847 -}
 
 
 summaryList : List AccordionType
@@ -52,8 +57,10 @@ update msg model =
 
 view : Model -> Html Msg
 view model =
-    div [ class "page" ]
+    div [ class "homePage" ]
         [ h1 [] [ text "MidnightCoder Docs" ]
-        , p [] [ text "" ]
-        , viewAccordion summaryList
+        , div []
+            [ viewAccordion summaryList
+            , baseCard [ text "helloo" ]
+            ]
         ]
