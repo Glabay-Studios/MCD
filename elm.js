@@ -5190,9 +5190,9 @@ var $elm$html$Html$p = _VirtualDom_node('p');
 var $author$project$Main$summaryList = _List_fromArray(
 	[
 		{
-		content: $elm$core$Maybe$Nothing,
+		content: $elm$core$Maybe$Just('Midnight Coder Discord'),
 		isATag: true,
-		location: $elm$core$Maybe$Just('https://discord.gg/9w9x7d3'),
+		location: $elm$core$Maybe$Just('https://discord.gg/HCrMST97r'),
 		title: 'Join the discord!'
 	},
 		{
@@ -5224,18 +5224,12 @@ var $elm$html$Html$summary = _VirtualDom_node('summary');
 var $author$project$Components$Accordion$V1$accordionLogic = function (l) {
 	return A2(
 		$elm$html$Html$details,
-		_List_fromArray(
-			[
-				$elm$html$Html$Attributes$class('detailsBox')
-			]),
+		_List_Nil,
 		_List_fromArray(
 			[
 				A2(
 				$elm$html$Html$summary,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$class('summaryBox')
-					]),
+				_List_Nil,
 				_List_fromArray(
 					[
 						$elm$html$Html$text(l.title)

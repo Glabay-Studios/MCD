@@ -10,8 +10,8 @@ summaryList : List AccordionType
 summaryList =
     [ { title = "Join the discord!"
       , isATag = True
-      , location = Just "https://discord.gg/9w9x7d3"
-      , content = Nothing
+      , location = Just "https://discord.gg/HCrMST97r"
+      , content = Just "Midnight Coder Discord"
       }
     , { title = "food"
       , isATag = False
