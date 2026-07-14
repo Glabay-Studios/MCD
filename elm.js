@@ -5264,12 +5264,18 @@ var $author$project$Main$view = function (model) {
 					])),
 				A2(
 				$elm$html$Html$details,
-				_List_Nil,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('detailsBox')
+					]),
 				_List_fromArray(
 					[
 						A2(
 						$elm$html$Html$summary,
-						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('summaryBox')
+							]),
 						_List_fromArray(
 							[
 								$elm$html$Html$text('Discord')

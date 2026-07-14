@@ -75,8 +75,8 @@ view model =
     div [ class "page" ]
         [ h1 [] [ text "MidnightCoder Docs" ]
         , p [] [ text "" ]
-        , details []
-            [ summary [] [ text "Discord" ]
+        , details [ class "detailsBox" ]
+            [ summary [ class "summaryBox" ] [ text "Discord" ]
             , viewShowSummary summaryList
             ]
         ]
