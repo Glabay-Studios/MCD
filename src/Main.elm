@@ -9,8 +9,14 @@ import Html.Attributes exposing (class, href)
 summaryList : List AccordionType
 summaryList =
     [ { title = "Join the discord!"
-      , isATag = Just True
+      , isATag = True
       , location = Just "https://discord.gg/9w9x7d3"
+      , content = Nothing
+      }
+    , { title = "food"
+      , isATag = False
+      , location = Nothing
+      , content = Just "I am a content"
       }
     ]
 
@@ -40,13 +46,14 @@ update msg model =
             ( model, Cmd.none )
 
 
+
+-- Here is the thing, we need to make sure that details is included within the map as well
+
+
 view : Model -> Html Msg
 view model =
     div [ class "page" ]
         [ h1 [] [ text "MidnightCoder Docs" ]
         , p [] [ text "" ]
-        , details [ class "detailsBox" ]
-            [ summary [ class "summaryBox" ] [ text "Discord" ]
-            , viewAccordion summaryList
-            ]
+        , viewAccordion summaryList
         ]

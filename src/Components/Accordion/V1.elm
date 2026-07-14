@@ -10,29 +10,41 @@ import Html.Attributes exposing (..)
 
 type alias AccordionType =
     { title : String
-    , isATag : Maybe Bool
+    , isATag : Bool
     , location : Maybe String
+    , content : Maybe String
     }
 
 
-showAccordion : AccordionType -> Html msg
-showAccordion l =
-    case l.isATag of
-        Just True ->
-            case l.location of
-                Just location ->
-                    a [ href location ] [ text l.title ]
-
-                Nothing ->
-                    text l.title
-
-        Just False ->
-            text l.title
+getContent : Maybe String -> String
+getContent maybeContent =
+    case maybeContent of
+        Just content ->
+            content
 
         Nothing ->
-            text l.title
+            ""
+
+
+
+-- class "detailsBox"
+-- class "summaryBox"
+
+
+accordionLogic : AccordionType -> Html msg
+accordionLogic l =
+    details []
+        [ summary [] [ text l.title ]
+        , div []
+            [ if l.isATag then
+                a [ href (getContent l.location) ] [ text (getContent l.content) ]
+
+              else
+                text (getContent l.content)
+            ]
+        ]
 
 
 viewAccordion : List AccordionType -> Html msg
 viewAccordion items =
-    div [ class "accordion" ] (List.map showAccordion items)
+    div [ class "accordion" ] (List.map accordionLogic items)

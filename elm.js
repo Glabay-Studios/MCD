@@ -5184,54 +5184,82 @@ var $elm$html$Html$Attributes$stringProperty = F2(
 			$elm$json$Json$Encode$string(string));
 	});
 var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
-var $elm$html$Html$details = _VirtualDom_node('details');
 var $elm$html$Html$div = _VirtualDom_node('div');
 var $elm$html$Html$h1 = _VirtualDom_node('h1');
 var $elm$html$Html$p = _VirtualDom_node('p');
-var $elm$html$Html$summary = _VirtualDom_node('summary');
 var $author$project$Main$summaryList = _List_fromArray(
 	[
 		{
-		isATag: $elm$core$Maybe$Just(true),
+		content: $elm$core$Maybe$Nothing,
+		isATag: true,
 		location: $elm$core$Maybe$Just('https://discord.gg/9w9x7d3'),
 		title: 'Join the discord!'
+	},
+		{
+		content: $elm$core$Maybe$Just('I am a content'),
+		isATag: false,
+		location: $elm$core$Maybe$Nothing,
+		title: 'food'
 	}
 	]);
 var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
 var $elm$html$Html$a = _VirtualDom_node('a');
+var $elm$html$Html$details = _VirtualDom_node('details');
+var $author$project$Components$Accordion$V1$getContent = function (maybeContent) {
+	if (maybeContent.$ === 'Just') {
+		var content = maybeContent.a;
+		return content;
+	} else {
+		return '';
+	}
+};
 var $elm$html$Html$Attributes$href = function (url) {
 	return A2(
 		$elm$html$Html$Attributes$stringProperty,
 		'href',
 		_VirtualDom_noJavaScriptUri(url));
 };
-var $author$project$Components$Accordion$V1$showAccordion = function (l) {
-	var _v0 = l.isATag;
-	if (_v0.$ === 'Just') {
-		if (_v0.a) {
-			var _v1 = l.location;
-			if (_v1.$ === 'Just') {
-				var location = _v1.a;
-				return A2(
-					$elm$html$Html$a,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$href(location)
-						]),
-					_List_fromArray(
-						[
-							$elm$html$Html$text(l.title)
-						]));
-			} else {
-				return $elm$html$Html$text(l.title);
-			}
-		} else {
-			return $elm$html$Html$text(l.title);
-		}
-	} else {
-		return $elm$html$Html$text(l.title);
-	}
+var $elm$html$Html$summary = _VirtualDom_node('summary');
+var $author$project$Components$Accordion$V1$accordionLogic = function (l) {
+	return A2(
+		$elm$html$Html$details,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$class('detailsBox')
+			]),
+		_List_fromArray(
+			[
+				A2(
+				$elm$html$Html$summary,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('summaryBox')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text(l.title)
+					])),
+				A2(
+				$elm$html$Html$div,
+				_List_Nil,
+				_List_fromArray(
+					[
+						l.isATag ? A2(
+						$elm$html$Html$a,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$href(
+								$author$project$Components$Accordion$V1$getContent(l.location))
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text(
+								$author$project$Components$Accordion$V1$getContent(l.content))
+							])) : $elm$html$Html$text(
+						$author$project$Components$Accordion$V1$getContent(l.content))
+					]))
+			]));
 };
 var $author$project$Components$Accordion$V1$viewAccordion = function (items) {
 	return A2(
@@ -5240,7 +5268,7 @@ var $author$project$Components$Accordion$V1$viewAccordion = function (items) {
 			[
 				$elm$html$Html$Attributes$class('accordion')
 			]),
-		A2($elm$core$List$map, $author$project$Components$Accordion$V1$showAccordion, items));
+		A2($elm$core$List$map, $author$project$Components$Accordion$V1$accordionLogic, items));
 };
 var $author$project$Main$view = function (model) {
 	return A2(
@@ -5265,26 +5293,7 @@ var $author$project$Main$view = function (model) {
 					[
 						$elm$html$Html$text('')
 					])),
-				A2(
-				$elm$html$Html$details,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$class('detailsBox')
-					]),
-				_List_fromArray(
-					[
-						A2(
-						$elm$html$Html$summary,
-						_List_fromArray(
-							[
-								$elm$html$Html$Attributes$class('summaryBox')
-							]),
-						_List_fromArray(
-							[
-								$elm$html$Html$text('Discord')
-							])),
-						$author$project$Components$Accordion$V1$viewAccordion($author$project$Main$summaryList)
-					]))
+				$author$project$Components$Accordion$V1$viewAccordion($author$project$Main$summaryList)
 			]));
 };
 var $author$project$Main$main = $elm$browser$Browser$element(
