@@ -3,6 +3,7 @@ module Main exposing (main)
 import Browser
 import Components.Accordion.V1 exposing (AccordionType, viewAccordion)
 import Components.Cards.Base.V1 exposing (baseCard)
+import Components.Cards.Photo.V1 exposing (PhotoCardType, photoCard)
 import Html exposing (Html, div, h1, p, text)
 import Html.Attributes exposing (class)
 
@@ -61,6 +62,6 @@ view model =
         [ h1 [] [ text "MidnightCoder Docs" ]
         , div []
             [ viewAccordion summaryList
-            , baseCard [ text "helloo" ]
+            , baseCard (Just "card") [ text "helloo" ]
             ]
         ]

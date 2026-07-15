@@ -4,6 +4,20 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 
 
-baseCard : List (Html msg) -> Html msg
-baseCard children =
-    div [ class "card" ] children
+
+-- TO = Type Of
+
+
+getTO : Maybe String -> String
+getTO maybeType =
+    case maybeType of
+        Just typeOf ->
+            typeOf
+
+        Nothing ->
+            ""
+
+
+baseCard : Maybe String -> List (Html msg) -> Html msg
+baseCard t children =
+    div [ class (getTO t) ] children
