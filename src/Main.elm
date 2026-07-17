@@ -18,11 +18,19 @@ summaryList =
       , isATag = True
       , location = Just "https://discord.gg/HCrMST97r"
       , content = Just "Midnight Coder Discord"
+      , baseCardType = "accordion-midnight"
       }
     , { title = "food"
       , isATag = False
       , location = Nothing
-      , content = Just "I am a content"
+      , content = Just "This is something I like"
+      , baseCardType = "accordion"
+      }
+    , { title = "Mike"
+      , isATag = False
+      , location = Nothing
+      , content = Just "This is the midnight coder"
+      , baseCardType = "accordion"
       }
     ]
 

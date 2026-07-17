@@ -1,5 +1,6 @@
 module Components.Accordion.V1 exposing (AccordionType, viewAccordion)
 
+import Components.Cards.Base.V1 exposing (baseCard)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 
@@ -13,6 +14,7 @@ type alias AccordionType =
     , isATag : Bool
     , location : Maybe String
     , content : Maybe String
+    , baseCardType : String
     }
 
 
@@ -28,18 +30,21 @@ getContent maybeContent =
 
 accordionLogic : AccordionType -> Html msg
 accordionLogic l =
-    details []
-        [ summary [] [ text l.title ]
-        , div []
-            [ if l.isATag then
-                a [ href (getContent l.location) ] [ text (getContent l.content) ]
+  baseCard (Just l.baseCardType)[
+      details []
+          [ summary [] [ text l.title ]
+          , div []
+              [ if l.isATag then
+                  a [ href (getContent l.location) ] [ text (getContent l.content) ]
 
-              else
-                text (getContent l.content)
-            ]
+                else
+                  text (getContent l.content)
+              ]
+          ]
         ]
 
 
 viewAccordion : List AccordionType -> Html msg
 viewAccordion items =
-    div [ class "accordion" ] (List.map accordionLogic items)
+     div[](List.map accordionLogic items)
+
