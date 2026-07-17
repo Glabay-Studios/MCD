@@ -4,8 +4,9 @@ import Browser
 import Components.Accordion.V1 exposing (AccordionType, viewAccordion)
 import Components.Cards.Base.V1 exposing (baseCard)
 import Components.Cards.Photo.V1 exposing (PhotoCardType, photoCard)
-import Html exposing (Html, div, h1, p, text)
-import Html.Attributes exposing (class)
+import LucideIcons
+import Html exposing (Html, div, h1, p, text, span)
+import Html.Attributes exposing (class, style)
 
 
 
@@ -18,19 +19,13 @@ summaryList =
       , isATag = True
       , location = Just "https://discord.gg/HCrMST97r"
       , content = Just "Midnight Coder Discord"
-      , baseCardType = "accordion-midnight"
+      , baseCardType = "accordion accordionMidnight"
       }
     , { title = "food"
       , isATag = False
       , location = Nothing
       , content = Just "This is something I like"
-      , baseCardType = "accordion"
-      }
-    , { title = "Mike"
-      , isATag = False
-      , location = Nothing
-      , content = Just "This is the midnight coder"
-      , baseCardType = "accordion"
+      , baseCardType = "accordion accordionLight"
       }
     ]
 
@@ -69,7 +64,12 @@ view model =
     div [ class "homePage" ]
         [ h1 [] [ text "MidnightCoder Docs" ]
         , div []
-            [ viewAccordion summaryList
-            , baseCard (Just "card") [ text "helloo" ]
+            [ 
+              span [style "font-size" "14px"] [LucideIcons.xIcon[]]
+            , div[class "topHomePage"][ 
+                viewAccordion summaryList ,
+                baseCard (Just "card") [ text "helloo" ]
+             ]
             ]
         ]
+

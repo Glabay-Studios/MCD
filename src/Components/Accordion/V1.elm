@@ -44,7 +44,7 @@ accordionLogic l =
         ]
 
 
-viewAccordion : List AccordionType -> Html msg
+viewAccordion : List AccordionType ->  Html msg
 viewAccordion items =
-     div[](List.map accordionLogic items)
+    div[class "accordionContainer"](List.map accordionLogic items)
 
