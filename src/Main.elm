@@ -74,7 +74,7 @@ view model =
         , div []
             [ h1 [] [ text "MidnightCoder Docs" ]
             , div [ class "topHomePage" ]
-                [ Card.card Card.Light [ text "helloo" ]
+                [ Card.card Card.Light [ text "Welcome to the Midnight Coder Docs!" ]
                 , Accordion.accordion Content.summaryItems
                 ]
             ]

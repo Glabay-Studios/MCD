@@ -22,7 +22,7 @@ import Navbar
 navItems : List Navbar.NavItem
 navItems =
     [ { icon = LucideIcons.homeIcon [], label = "Home", href = "#" }
-    , { icon = LucideIcons.fileTextIcon [], label = "Docs", href = "#" }
+    , { icon = LucideIcons.fileTextIcon [], label = "DevLog", href = "#" }
     , { icon = Icons.youtubeIcon [], label = "Videos", href = "https://www.youtube.com/@Glabay" }
     ]
 

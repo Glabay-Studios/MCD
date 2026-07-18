@@ -16,7 +16,7 @@
 }
 
 .mc-navbar--open {
-  max-width: 200px;
+  max-width: 100%;
 }
 
 .mc-navbar--closed {
