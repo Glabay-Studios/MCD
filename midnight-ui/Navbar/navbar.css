@@ -8,6 +8,10 @@
   color: white;
   padding: 1rem;
 
+  /* As a flex item, allow shrinking below content width so max-width
+     can actually collapse the bar (default min-width:auto blocks it). */
+  min-width: 0;
+
   /* Clip the words while they shrink to width 0 during the slide. */
   overflow: hidden;
 

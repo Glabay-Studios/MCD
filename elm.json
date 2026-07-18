@@ -4,7 +4,8 @@
         "src",
         "midnight-ui/Card",
         "midnight-ui/Navbar",
-        "midnight-ui/Accordion"
+        "midnight-ui/Accordion",
+        "midnight-ui/Carousel"
     ],
     "elm-version": "0.19.1",
     "dependencies": {

@@ -3,8 +3,9 @@ module Main exposing (main)
 import Accordion
 import Browser
 import Card
+import Carousel
 import Content
-import Html exposing (Html, div, h1, text)
+import Html exposing (Html, div, h1, text, h2)
 import Html.Attributes exposing (class)
 import Navbar
 
@@ -74,8 +75,10 @@ view model =
         , div []
             [ h1 [] [ text "MidnightCoder Docs" ]
             , div [ class "topHomePage" ]
-                [ Card.card Card.Light [ text "Welcome to the Midnight Coder Docs!" ]
+                [ Card.card Card.Light [] [ text "Welcome to the Midnight Coder Docs!" ]
                 , Accordion.accordion Content.summaryItems
+                , h2[][text "recent videos"]
+                , Carousel.carousel Carousel.InfiniteScroll Content.carouselItems
                 ]
             ]
         ]

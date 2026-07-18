@@ -1,0 +1,69 @@
+/* Midnight UI — Carousel. Requires tokens.css. */
+
+.mc-carousel {
+  width: 100%;
+}
+
+.mc-carousel--infinite {
+  overflow: hidden;
+}
+
+.mc-carousel--pagination {
+  overflow-x: auto;
+}
+
+.mc-carousel__track {
+  display: flex;
+  width: max-content; 
+}
+
+.mc-carousel--infinite .mc-carousel__track {
+  animation: mc-carousel-scroll 30s linear infinite;
+}
+
+/* Pause on hover so the cards are clickable. */
+.mc-carousel--infinite:hover .mc-carousel__track {
+  animation-play-state: paused;
+}
+
+@keyframes mc-carousel-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.mc-carousel__card {
+  flex: 0 0 auto;
+  width: 220px;
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 10px;
+  background-color: var(--mc-purple);
+  border: 1px solid var(--mc-aurora);
+  color: white;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+}
+
+.mc-carousel__card:hover {
+  transform: translateY(-4px);
+}
+
+.mc-carousel__img {
+  display: block;
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.mc-carousel__caption {
+  font-size: 0.9rem;
+  color: white;
+}
