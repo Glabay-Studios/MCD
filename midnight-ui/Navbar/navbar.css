@@ -1,0 +1,76 @@
+/* Midnight UI — Navbar. Requires tokens.css. */
+
+.mc-navbar {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--mc-purple);
+  min-height: 100vh;
+  color: white;
+  padding: 1rem;
+
+  /* Clip the words while they shrink to width 0 during the slide. */
+  overflow: hidden;
+
+  /* The slide: quick (0.2s) + eased. */
+  transition: max-width 0.2s ease;
+}
+
+.mc-navbar--open {
+  max-width: 200px;
+}
+
+.mc-navbar--closed {
+  max-width: 80px;
+}
+
+.mc-navbar__toggle {
+  background-color: var(--mc-purple);
+  padding: 0.5rem;
+  border-radius: 4px;
+  color: white;
+  border: 1px solid var(--mc-aurora);
+}
+
+.mc-navbar__toggle:hover {
+  cursor: pointer;
+  color: var(--mc-aurora);
+}
+
+.mc-navbar__items {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.mc-navbar__link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+}
+
+.mc-navbar__link:hover {
+  color: var(--mc-aurora);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.mc-navbar__label {
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+/* Collapsed: fade the words out, keep the icons. */
+.mc-navbar--closed .mc-navbar__label {
+  opacity: 0;
+}
+
+.mc-navbar__icon {
+  display: flex;
+  flex-shrink: 0;
+}
