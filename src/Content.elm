@@ -1,7 +1,7 @@
 module Content exposing (navItems, summaryItems)
 
 
-{-| Author: TuringProblem @15:38 20260718 |-}
+{- Author: TuringProblem @15:38 20260718 -}
 
 {-| App content/data for MidnightCoder Docs.
 

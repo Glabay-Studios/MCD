@@ -1,7 +1,7 @@
 module Accordion exposing (Item, Variant(..), accordion)
 
 
-{-| Author: TuringProblem @14:42 20260718 |-}
+{- Author: TuringProblem @14:42 20260718 -}
 
 {-| Midnight UI — Accordion
 

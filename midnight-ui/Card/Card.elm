@@ -1,6 +1,6 @@
 module Card exposing (Variant(..), card)
 
-{-| Author: TuringProblem @14:45 20260718 |-}
+{- Author: TuringProblem @14:45 20260718 -}
 {-| Midnight UI — Card
 
 A plain surface container. Pick a visual variant, pass any children.
