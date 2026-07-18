@@ -14,6 +14,7 @@ content is editable in one obvious place.
 import Accordion
 import Html exposing (a, text)
 import Html.Attributes exposing (href)
+import Icons
 import LucideIcons
 import Navbar
 
@@ -22,6 +23,7 @@ navItems : List Navbar.NavItem
 navItems =
     [ { icon = LucideIcons.homeIcon [], label = "Home", href = "#" }
     , { icon = LucideIcons.fileTextIcon [], label = "Docs", href = "#" }
+    , { icon = Icons.youtubeIcon [], label = "Videos", href = "https://www.youtube.com/@Glabay" }
     ]
 
 

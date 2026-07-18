@@ -3,34 +3,6 @@ module Accordion exposing (Item, Variant(..), accordion)
 
 {- Author: TuringProblem @14:42 20260718 -}
 
-{-| Midnight UI — Accordion
-
-A row of collapsible `<details>` panels. Each item is self-describing:
-a title, a variant, and arbitrary body content.
-
-    import Accordion
-    import Html exposing (a, text)
-    import Html.Attributes exposing (href)
-
-    Accordion.accordion
-        [ { title = "Join the discord!"
-          , content = a [ href "https://discord.gg/..." ] [ text "Midnight Coder" ]
-          , variant = Accordion.Midnight
-          }
-        , { title = "Food"
-          , content = text "Something I like"
-          , variant = Accordion.Light
-          }
-        ]
-
-`content` is `Html Never` — put a link, plain text, whatever, as long as it
-has no event handlers. This replaces the old `isATag` / `Maybe location`
-booleans: the caller just builds the content they want.
-
-@docs Item, Variant, accordion
-
--}
-
 import Html exposing (Html, details, div, summary, text)
 import Html.Attributes exposing (class)
 

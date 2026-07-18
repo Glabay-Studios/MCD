@@ -1,20 +1,6 @@
 module Card exposing (Variant(..), card)
 
 {- Author: TuringProblem @14:45 20260718 -}
-{-| Midnight UI — Card
-
-A plain surface container. Pick a visual variant, pass any children.
-
-    import Card
-
-    Card.card Card.Midnight [ text "hello" ]
-
-Copy `Card/Card.elm` + `Card/card.css` into your project, and make sure
-`tokens.css` is linked. That's the whole component.
-
-@docs Variant, card
-
--}
 
 import Html exposing (Html, div)
 import Html.Attributes exposing (class)
