@@ -3,5 +3,5 @@ elm-stuff
 # elm-repl generated files
 repl-temp-*
 
-midnight-ui/examples/*
+midnight-ui/examples/demo.js
 elm.js
