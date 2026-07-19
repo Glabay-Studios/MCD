@@ -21,7 +21,9 @@ view =
                 , h3 [] [ text "recent videos" ]
                 ]
             , Carousel.carousel Carousel.InfiniteScroll Carousel.Left Content.carouselItems
-            , div [ class "line" ] []
+            , div[] [ div [ class "line" ] []
+                , h3 [] [ text "Midnight Coder Challenges" ]
+                ]
             , Carousel.carousel Carousel.InfiniteScroll Carousel.Right Content.courseCarousel
             ]
         ]

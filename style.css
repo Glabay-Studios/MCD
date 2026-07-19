@@ -213,3 +213,20 @@ body {
   color: var(--aurora-green-color);
 }
 
+.carousel-base {
+  min-height: 200px;
+  overflow: hidden;
+  
+  & h1{
+    position: relative;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    max-width: 100%;
+  }
+
+  & p {
+    color: white;
+    overflow-wrap: break-word;
+    max-width: 100%;
+  }
+}

@@ -10,7 +10,6 @@ type Variant
     = InfiniteScroll
     | Pagination
 
-
 type Style
     = Video
     | Rating
@@ -21,11 +20,12 @@ type Direction
 
 
 
-type alias Item =
+type alias Item msg =
     { link : String
-    , thumbnail : Maybe String
+    , thumbnail : Maybe String 
     , subText : Maybe String
     , style : Style
+    , nonThumbnailContent: List (Html msg)
     }
 
 
@@ -34,7 +34,7 @@ minCopyCards =
     16
 
 
-carousel : Variant -> Direction -> List Item -> Html msg
+carousel : Variant -> Direction -> List (Item msg) -> Html msg
 carousel variant direction items =
     case variant of
         Pagination ->
@@ -100,30 +100,27 @@ viewSubText subText =
         Nothing ->
             text ""
 
+
 getThumbnail : Maybe String -> String
 getThumbnail thumbnail =
-    case thumbnail of
-        Just t ->
-            t
+  case thumbnail of
+    Just t ->
+      t 
+    Nothing ->
+      ""
 
-        Nothing ->
-            ""
-
-
-viewItem : Item -> Html msg
+viewItem : Item msg -> Html msg
 viewItem item =
-    a [ class ("mc-carousel__card " ++ styleClass item.style), href item.link ]
-        [ 
-          if getThumbnail item.thumbnail == "" then
-            div [][text "Hello world"]
-            else
-            img
+    if getThumbnail item.thumbnail == "" then
+      a [class ("mc-carousel__card " ++ styleClass item.style), href item.link] item.nonThumbnailContent
+        else 
+      a [ class ("mc-carousel__card " ++ styleClass item.style), href item.link ]
+          [ img
             [ class "mc-carousel__img"
-            , src (getThumbnail item.thumbnail)
-            , alt (Maybe.withDefault "" item.subText)
-            ]
-            []
-        , viewSubText item.subText
-        ]
+              , src (getThumbnail item.thumbnail)
+              , alt (Maybe.withDefault "" item.subText)
+            ][]
+          , viewSubText item.subText
+          ]
 
 

@@ -1,9 +1,6 @@
 module Main exposing (main)
 
-import Accordion
 import Browser
-import Card
-import Carousel
 import Content
 import Html exposing (Html, a, div, h1, text, h3, footer, span)
 import Html.Attributes exposing (class, href)
