@@ -1,9 +1,9 @@
 module Carousel exposing (Direction(..), Item, Style(..), Variant(..), carousel)
 
-{- Author: MidnightCoder UI — carousel of clickable image cards. -}
-
 import Html exposing (Html, a, div, img, text)
 import Html.Attributes exposing (alt, class, href, src, style)
+
+{-| Author: TuringProblem @10:57 20260718  -}
 
 
 type Variant
@@ -20,9 +20,10 @@ type Direction
     | Right
 
 
+
 type alias Item =
     { link : String
-    , thumbnail : String
+    , thumbnail : Maybe String
     , subText : Maybe String
     , style : Style
     }
@@ -99,13 +100,26 @@ viewSubText subText =
         Nothing ->
             text ""
 
+getThumbnail : Maybe String -> String
+getThumbnail thumbnail =
+    case thumbnail of
+        Just t ->
+            t
+
+        Nothing ->
+            ""
+
 
 viewItem : Item -> Html msg
 viewItem item =
     a [ class ("mc-carousel__card " ++ styleClass item.style), href item.link ]
-        [ img
+        [ 
+          if getThumbnail item.thumbnail == "" then
+            div [][text "Hello world"]
+            else
+            img
             [ class "mc-carousel__img"
-            , src item.thumbnail
+            , src (getThumbnail item.thumbnail)
             , alt (Maybe.withDefault "" item.subText)
             ]
             []

@@ -9,6 +9,7 @@ import Html exposing (Html, a, div, h1, text, h3, footer, span)
 import Html.Attributes exposing (class, href)
 import Navbar
 import Pages.Devlog.DevlogPage as DevlogPage
+import Pages.Home.HomePage as HomePage 
 
 
 {-| @author: TuringProblem: 20260714 : 1847 |-}
@@ -84,22 +85,6 @@ pageFromHref href current =
             current
 
 
-view : Model -> Html Msg
-view model =
-    div [ class "homePage" ]
-        [ div [ class "mainRow" ]
-            [ Navbar.navbar
-                { isOpen = model.navOpen
-                , onToggle = ToggleNav
-                , onNavigate = NavigateTo
-                , items = Content.navItems
-                }
-            , div [ class "contentArea" ]
-                [ viewPage model ]
-            ]
-        , viewFooter
-        ]
-
 
 viewFooter : Html Msg
 viewFooter =
@@ -119,26 +104,27 @@ viewPage : Model -> Html Msg
 viewPage model =
     case model.page of
         Home ->
-            viewHome
+            HomePage.view
 
         Devlog ->
             DevlogPage.view
 
 
-viewHome : Html Msg
-viewHome =
-    div [ class "pageContainer" ]
-        [ h1 [] [ text "MidnightCoder Docs" ]
-        , div [ class "topHomePage" ]
-            [ Card.card Card.Light [] [ text "Welcome to the Midnight Coder Docs!" ]
-            , Accordion.accordion Content.summaryItems
-            , div []
-                [ div [ class "line" ] []
-                , h3 [] [ text "recent videos" ]
-                ]
-            , Carousel.carousel Carousel.InfiniteScroll Carousel.Left Content.carouselItems
-            , div [ class "line" ] []
-            , Carousel.carousel Carousel.InfiniteScroll Carousel.Right Content.courseCarousel
+
+view : Model -> Html Msg
+view model =
+    div [ class "homePage" ]
+        [ div [ class "mainRow" ]
+            [ Navbar.navbar
+                { isOpen = model.navOpen
+                , onToggle = ToggleNav
+                , onNavigate = NavigateTo
+                , items = Content.navItems
+                }
+            , div [ class "contentArea" ]
+                [ viewPage model ]
             ]
+        , viewFooter
         ]
+
 
