@@ -5,7 +5,7 @@ import Browser
 import Card
 import Carousel
 import Content
-import Html exposing (Html, div, h1, text, h2)
+import Html exposing (Html, div, h1, text, h3, footer)
 import Html.Attributes exposing (class)
 import Navbar
 
@@ -72,13 +72,20 @@ view model =
             , onToggle = ToggleNav
             , items = Content.navItems
             }
-        , div []
+        , div [class "pageContainer"]
             [ h1 [] [ text "MidnightCoder Docs" ]
             , div [ class "topHomePage" ]
                 [ Card.card Card.Light [] [ text "Welcome to the Midnight Coder Docs!" ]
                 , Accordion.accordion Content.summaryItems
-                , h2[][text "recent videos"]
-                , Carousel.carousel Carousel.InfiniteScroll Content.carouselItems
+                ,div[][ 
+                  div[class "line"][]
+                  , h3[][text "recent videos"]
+                ]
+                , Carousel.carousel Carousel.InfiniteScroll Carousel.Left Content.carouselItems
+                , div[class "line"][]
+                , Carousel.carousel Carousel.InfiniteScroll Carousel.Right Content.courseCarousel
                 ]
             ]
+        , footer[][text "footer"]
         ]
+

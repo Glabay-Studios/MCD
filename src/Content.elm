@@ -1,4 +1,4 @@
-module Content exposing (carouselItems, navItems, summaryItems)
+module Content exposing (courseCarousel, carouselItems, navItems, summaryItems)
 
 
 {- Author: TuringProblem @15:38 20260718 -}
@@ -30,6 +30,26 @@ navItems =
 
 reusedImage : String
 reusedImage = "https://i.ytimg.com/vi/lVcMIgbf0M4/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGGUgVChNMA8=&rs=AOn4CLBecwiWiiHrnCm3Igm2ykm8hXbi1w"
+
+
+courseCarousel : List Carousel.Item
+courseCarousel =
+  [ {link = "midnightcoder.dev"
+    , thumbnail = ""
+    , subText = Just ""
+    , style = Carousel.Rating
+    }
+    ,{link = "midnightcoder.dev"
+    , thumbnail = ""
+    , subText = Just ""
+    , style = Carousel.Rating
+    }
+    ,{link = "midnightcoder.dev"
+    , thumbnail = ""
+    , subText = Just ""
+    , style = Carousel.Rating
+    }
+  ]
 
 carouselItems : List Carousel.Item
 carouselItems =
@@ -93,8 +113,8 @@ summaryItems =
       , content = a [ href "https://discord.gg/HCrMST97r" ] [ text "Midnight Coder Discord" ]
       , variant = Accordion.Midnight
       }
-    , { title = "food"
-      , content = text "This is something I like"
+    , { title = "Coffee"
+      , content = text "Keep your curiousity open, your skills sharp, and that coffee cup full ☕️"
       , variant = Accordion.Light
       }
     ]
