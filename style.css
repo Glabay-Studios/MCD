@@ -214,8 +214,13 @@ body {
 }
 
 .carousel-base {
+  display: flex;
+  flex-direction: column;
+  justify-content: between;
   min-height: 200px;
   overflow: hidden;
+  padding: 1rem;
+  border: 1px solid rgba(0,0,0, 1);
   
   & h1{
     position: relative;

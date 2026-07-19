@@ -5,6 +5,12 @@ import Html exposing (..)
 
 view : Html msg
 view = 
-  baseComponent [
-    h1 [] [text "HigherLower"]
-    ]
+  baseComponent {
+    children = [
+      div[][ 
+        div[][ text "HigherLower" ]
+        , div[][text "This is a higher lower"]
+        ]
+      ]
+    , difficulty = 1
+  }

@@ -68,7 +68,6 @@
 
 .mc-carousel__card:hover {
   transform: translateY(-4px);
-  color: var(--mc-purple);
 }
 
 .mc-carousel__img {

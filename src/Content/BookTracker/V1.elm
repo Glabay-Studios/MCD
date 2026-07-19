@@ -6,6 +6,13 @@ import Html.Attributes exposing (..)
 
 view : Html msg
 view = 
-  baseComponent [
-    h1 [] [text "BookTracker"]
-    ]
+
+  baseComponent {
+    children = [
+      div[][ 
+        div[][ text "Book Tracker" ]
+        , div[][text "This is a book tracker"]
+        ]
+      ]
+    , difficulty = 1
+  }
