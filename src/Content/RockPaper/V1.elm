@@ -9,9 +9,9 @@ view =
   baseComponent {
     children = [
       div[][ 
-        div[][ text "RockPaper" ]
+        div[][ text "WebApp - Rock, Paper, Scissors" ]
         , div[][text "This is a rock paper"]
         ]
       ]
-    , difficulty = 1
+    , difficulty = 3
   }

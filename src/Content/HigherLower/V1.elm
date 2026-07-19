@@ -8,7 +8,7 @@ view =
   baseComponent {
     children = [
       div[][ 
-        div[][ text "HigherLower" ]
+        div[][ text "Java CLI Challenge - Higher or Lower" ]
         , div[][text "This is a higher lower"]
         ]
       ]

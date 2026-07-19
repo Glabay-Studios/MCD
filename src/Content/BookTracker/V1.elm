@@ -10,9 +10,9 @@ view =
   baseComponent {
     children = [
       div[][ 
-        div[][ text "Book Tracker" ]
+        div[][ text "Spring Boot 4 Book Tracker Challenge" ]
         , div[][text "This is a book tracker"]
         ]
       ]
-    , difficulty = 1
+    , difficulty = 3
   }

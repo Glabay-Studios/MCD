@@ -216,7 +216,7 @@ body {
 .carousel-base {
   display: flex;
   flex-direction: column;
-  justify-content: between;
+  justify-content: space-between;
   min-height: 200px;
   overflow: hidden;
   padding: 1rem;
@@ -233,5 +233,23 @@ body {
     color: white;
     overflow-wrap: break-word;
     max-width: 100%;
+  }
+
+  .difficulty {
+    display: flex;
+    align-items: center;
+    items-align: center;
+    text-align: center;
+    gap: 0.5rem;
+    color: white; 
+
+    & p {
+      font-size: 0.9rem;
+    }
+    & span {
+      font-size: 1.6rem;
+    }
+
+
   }
 }

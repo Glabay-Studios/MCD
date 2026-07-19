@@ -11,9 +11,9 @@ view =
   baseComponent {
     children = [
       div[][ 
-        div[][ text "Bank Simulator" ]
+        div[][ text "Java Bank Simulator" ]
         , div[][text "This is a bank simulator"]
         ]
       ]
-    , difficulty = 1
+    , difficulty = 4
   }
