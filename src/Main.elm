@@ -8,12 +8,15 @@ import Content
 import Html exposing (Html, div, h1, text, h3, footer)
 import Html.Attributes exposing (class)
 import Navbar
+import Pages.Devlog.DevlogPage as DevlogPage
 
 
 {-| @author: TuringProblem: 20260714 : 1847 |-}
 
 
-type Page = Home
+type Page
+    = Home
+    | Devlog
 
 
 type Theme = Light | Dark
@@ -30,6 +33,7 @@ type Msg
     = NoOp
     | ToggleTheme
     | ToggleNav
+    | NavigateTo String
 
 
 main : Program () Model Msg
@@ -60,8 +64,28 @@ update msg model =
         ToggleNav ->
             ( { model | navOpen = not model.navOpen }, Cmd.none )
 
+        NavigateTo href ->
+            ( { model | page = pageFromHref href model.page }, Cmd.none )
+
         NoOp ->
             ( model, Cmd.none )
+
+
+{-| Map a nav link's href to a Page. The navbar hands back the raw href
+string; routing (which string means which page) lives here in the app,
+not in the library. Unknown hrefs keep the current page.
+-}
+pageFromHref : String -> Page -> Page
+pageFromHref href current =
+    case href of
+        "#home" ->
+            Home
+
+        "#devlog" ->
+            Devlog
+
+        _ ->
+            current
 
 
 view : Model -> Html Msg
@@ -70,22 +94,38 @@ view model =
         [ Navbar.navbar
             { isOpen = model.navOpen
             , onToggle = ToggleNav
+            , onNavigate = NavigateTo
             , items = Content.navItems
             }
-        , div [class "pageContainer"]
-            [ h1 [] [ text "MidnightCoder Docs" ]
-            , div [ class "topHomePage" ]
-                [ Card.card Card.Light [] [ text "Welcome to the Midnight Coder Docs!" ]
-                , Accordion.accordion Content.summaryItems
-                ,div[][ 
-                  div[class "line"][]
-                  , h3[][text "recent videos"]
+        , viewPage model
+        , footer [] [ text "footer" ]
+        ]
+
+
+viewPage : Model -> Html Msg
+viewPage model =
+    case model.page of
+        Home ->
+            viewHome
+
+        Devlog ->
+            DevlogPage.view
+
+
+viewHome : Html Msg
+viewHome =
+    div [ class "pageContainer" ]
+        [ h1 [] [ text "MidnightCoder Docs" ]
+        , div [ class "topHomePage" ]
+            [ Card.card Card.Light [] [ text "Welcome to the Midnight Coder Docs!" ]
+            , Accordion.accordion Content.summaryItems
+            , div []
+                [ div [ class "line" ] []
+                , h3 [] [ text "recent videos" ]
                 ]
-                , Carousel.carousel Carousel.InfiniteScroll Carousel.Left Content.carouselItems
-                , div[class "line"][]
-                , Carousel.carousel Carousel.InfiniteScroll Carousel.Right Content.courseCarousel
-                ]
+            , Carousel.carousel Carousel.InfiniteScroll Carousel.Left Content.carouselItems
+            , div [ class "line" ] []
+            , Carousel.carousel Carousel.InfiniteScroll Carousel.Right Content.courseCarousel
             ]
-        , footer[][text "footer"]
         ]
 
