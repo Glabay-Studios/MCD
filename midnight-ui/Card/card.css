@@ -12,7 +12,7 @@
 }
 
 .mc-card--midnight {
-  background-color: var(--mc-purple);
+  background-color: var(--mc-background-card);
   color: white;
   border: 1px solid var(--mc-aurora);
 }

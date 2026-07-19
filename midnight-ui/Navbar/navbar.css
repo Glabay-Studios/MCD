@@ -3,19 +3,15 @@
 .mc-navbar {
   display: flex;
   flex-direction: column;
-  background-color: var(--mc-purple);
+  background-color: var(--mc-background-card);
   min-height: 100vh;
   color: white;
   padding: 1rem;
 
-  /* As a flex item, allow shrinking below content width so max-width
-     can actually collapse the bar (default min-width:auto blocks it). */
   min-width: 0;
 
-  /* Clip the words while they shrink to width 0 during the slide. */
   overflow: hidden;
 
-  /* The slide: quick (0.2s) + eased. */
   transition: max-width 0.2s ease;
 }
 
@@ -28,16 +24,17 @@
 }
 
 .mc-navbar__toggle {
-  background-color: var(--mc-purple);
+  background-color: var(--mc-background-card);
   padding: 0.5rem;
   border-radius: 4px;
   color: white;
-  border: 1px solid var(--mc-aurora);
+  border: 1px solid var(--mc-nav-border);
 }
 
 .mc-navbar__toggle:hover {
   cursor: pointer;
   color: var(--mc-aurora);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .mc-navbar__items {

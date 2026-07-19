@@ -5,8 +5,8 @@ import Browser
 import Card
 import Carousel
 import Content
-import Html exposing (Html, div, h1, text, h3, footer)
-import Html.Attributes exposing (class)
+import Html exposing (Html, a, div, h1, text, h3, footer, span)
+import Html.Attributes exposing (class, href)
 import Navbar
 import Pages.Devlog.DevlogPage as DevlogPage
 
@@ -71,10 +71,6 @@ update msg model =
             ( model, Cmd.none )
 
 
-{-| Map a nav link's href to a Page. The navbar hands back the raw href
-string; routing (which string means which page) lives here in the app,
-not in the library. Unknown hrefs keep the current page.
--}
 pageFromHref : String -> Page -> Page
 pageFromHref href current =
     case href of
@@ -91,14 +87,31 @@ pageFromHref href current =
 view : Model -> Html Msg
 view model =
     div [ class "homePage" ]
-        [ Navbar.navbar
-            { isOpen = model.navOpen
-            , onToggle = ToggleNav
-            , onNavigate = NavigateTo
-            , items = Content.navItems
-            }
-        , viewPage model
-        , footer [] [ text "footer" ]
+        [ div [ class "mainRow" ]
+            [ Navbar.navbar
+                { isOpen = model.navOpen
+                , onToggle = ToggleNav
+                , onNavigate = NavigateTo
+                , items = Content.navItems
+                }
+            , div [ class "contentArea" ]
+                [ viewPage model ]
+            ]
+        , viewFooter
+        ]
+
+
+viewFooter : Html Msg
+viewFooter =
+    footer [ class "siteFooter" ]
+        [ div [ class "siteFooter__brand" ]
+            [ span [ class "siteFooter__title" ] [ text "MidnightCoder" ]
+            , span [ class "siteFooter__tag" ] [ text "Keep the coffee full ☕️" ]
+            ]
+        , div [ class "siteFooter__links" ]
+            [ a [ class "siteFooter__link", href "https://discord.gg/HCrMST97r" ] [ text "Discord" ]
+            , a [ class "siteFooter__link", href "https://www.youtube.com/@Glabay" ] [ text "YouTube" ]
+            ]
         ]
 
 
