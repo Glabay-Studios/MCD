@@ -47,7 +47,7 @@ carousel variant direction items =
                     repeatToFill minCopyCards items
 
                 duration =
-                    String.fromInt (List.length copy * 3) ++ "s"
+                    String.fromInt (List.length copy * 8) ++ "s"
             in
             div [ class ("mc-carousel mc-carousel--infinite " ++ directionClass direction) ]
                 [ div

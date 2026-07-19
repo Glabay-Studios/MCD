@@ -68,7 +68,13 @@ courseCarousel =
 carouselItems : List (Carousel.Item msg)
 carouselItems =
 
-    [ { link = "https://www.youtube.com/watch?v=lVcMIgbf0M4"
+    [ { link = "https://www.youtube.com/watch?v=GrcC6RAFVvg"
+      , thumbnail = Just "https://i.ytimg.com/vi/GrcC6RAFVvg/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCS_uX2YHZdBPxmG9mssq9m8FTogA"
+      , subText = Just "Feature Branches, Atomic Branches, and Better Code"
+      , style = Carousel.Video
+      , nonThumbnailContent = []
+      }
+      ,{ link = "https://www.youtube.com/watch?v=lVcMIgbf0M4"
       , thumbnail = Just reusedImage
       , subText = Just "Most Java Developers Learn OOP the Wrong Way"
       , style = Carousel.Video
