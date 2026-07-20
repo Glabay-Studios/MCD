@@ -20,6 +20,8 @@
   --midnight-bg: #0B0E14;
   --beak-orange: #FF9D00;
   --mc-bg-card: #1E1E2E;
+  --mc-bg-card-hover: rgba(168, 85, 247, 0.65);
+  // --mc-bg-card-hover: rgba(168, 85, 247, 0.3);
 }
 
 /* Minimal reset shared by all components. */

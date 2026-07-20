@@ -5,7 +5,7 @@
 }
 
 .mc-carousel--infinite {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .mc-carousel--pagination {
@@ -52,7 +52,7 @@
   padding: 0.75rem;
   border-radius: 10px;
   background-color: var(--mc-bg-card);
-  border: 1px solid var(--mc-violet);
+  border: 1px solid var(--mc-bg-card-hover);
   color: white;
   text-decoration: none;
   transition: transform 0.15s ease;
@@ -69,6 +69,7 @@
 
 .mc-carousel__card:hover {
   transform: translateY(-4px);
+  border: 1px solid var(--mc-violet);
 }
 
 .mc-carousel__img {

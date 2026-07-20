@@ -27,6 +27,7 @@ view =
             , Carousel.carousel Carousel.InfiniteScroll Carousel.Right Content.courseCarousel
             , div[] [ div [ class "line" ] []
                 , h2 [] [ text "What is the Midnight Coder?" ]
+                , p [] [ text "This is the place that we all go to in the night and get things done."]
                 ]
             ]
         ]
