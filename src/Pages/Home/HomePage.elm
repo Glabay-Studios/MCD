@@ -1,7 +1,7 @@
 
 module Pages.Home.HomePage exposing (view)
 
-import Html exposing (Html, div, h1, p, text, h3, footer, span)
+import Html exposing (Html, div, h1, h2, h3, p, text, footer, span)
 import Html.Attributes exposing (class)
 import Accordion
 import Card
@@ -25,6 +25,9 @@ view =
                 , h3 [] [ text "Midnight Coder Challenges" ]
                 ]
             , Carousel.carousel Carousel.InfiniteScroll Carousel.Right Content.courseCarousel
+            , div[] [ div [ class "line" ] []
+                , h2 [] [ text "What is the Midnight Coder?" ]
+                ]
             ]
         ]
 

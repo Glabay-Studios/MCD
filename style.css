@@ -7,6 +7,14 @@
   --midnight-background: rgba(30, 30, 46, 1);
 
   --mc-background-card: rgba(61, 43, 69, 0.5);
+
+  --mc-purple: #A855F7;
+  --mc-ice-blue: #A5F2F3;
+  --mc-ice-shadow: #74C7D3;
+  --mc-pegion-black: #2C2C2C;
+  --midnight-bg: #0B0E14;
+  --beak-orange: #FF9D00;
+
 }
 
 * {
@@ -28,7 +36,7 @@ body {
   height: 100vh;
   overflow: hidden;
   padding: 0;
-  background-color: var(--midnight-background);
+  background-color: var(--midnight-bg);
 
   & h1 {
     color: white;
@@ -127,8 +135,9 @@ body {
 .line {
   width: 100%;
   height: 1px;
-  background-color: var(--black-background-color);
+  background-color: var(--mc-pegion-black);
 }
+
 .accordionContainer {
   display: flex;
   width: 100%;
@@ -177,7 +186,7 @@ body {
   gap: 1rem;
   flex-wrap: wrap;
   padding: 0.9rem 24px;
-  background-color: var(--mc-background-card);
+  background-color: var(--mc-bg-card);
   color: white;
 }
 
@@ -247,7 +256,7 @@ body {
       font-size: 0.9rem;
     }
     & span {
-      font-size: 1.6rem;
+      font-size: 1rem;
     }
 
 

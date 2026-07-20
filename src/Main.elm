@@ -88,7 +88,7 @@ viewFooter =
     footer [ class "siteFooter" ]
         [ div [ class "siteFooter__brand" ]
             [ span [ class "siteFooter__title" ] [ text "MidnightCoder" ]
-            , span [ class "siteFooter__tag" ] [ text "Keep the coffee full ☕️" ]
+            , span [ class "siteFooter__tag" ] [ text "Keep your curiousity open, your skills sharp, and that coffee cup full ☕️ Catch you in the Discord." ]
             ]
         , div [ class "siteFooter__links" ]
             [ a [ class "siteFooter__link", href "https://discord.gg/HCrMST97r" ] [ text "Discord" ]

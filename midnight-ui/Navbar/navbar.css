@@ -3,7 +3,7 @@
 .mc-navbar {
   display: flex;
   flex-direction: column;
-  background-color: var(--mc-background-card);
+  background-color: var(--mc-bg-card);
   min-height: 100vh;
   color: white;
   padding: 1rem;
@@ -24,7 +24,7 @@
 }
 
 .mc-navbar__toggle {
-  background-color: var(--mc-background-card);
+  background-color: var(--mc-bg-card);
   padding: 0.5rem;
   border-radius: 4px;
   color: white;
@@ -57,7 +57,7 @@
 }
 
 .mc-navbar__link:hover {
-  color: var(--mc-aurora);
+  color: var(--mc-violet);
   background-color: rgba(255, 255, 255, 0.05);
 }
 

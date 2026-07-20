@@ -51,7 +51,8 @@
   gap: 0.5rem;
   padding: 0.75rem;
   border-radius: 10px;
-  background-color: var(--mc-background-card);
+  background-color: var(--mc-bg-card);
+  border: 1px solid var(--mc-violet);
   color: white;
   text-decoration: none;
   transition: transform 0.15s ease;

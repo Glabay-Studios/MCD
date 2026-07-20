@@ -54,9 +54,10 @@
 }
 
 .mc-accordion--midnight {
-  background-color: var(--mc-background-card);
+  background-color: var(--mc-bg-card);
   color: white;
   box-shadow: -15px 0px 0px -5px var(--mc-aurora);
+  border: 1px solid var(--mc-violet);
 }
 
 .mc-accordion--midnight a {

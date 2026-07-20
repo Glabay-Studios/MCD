@@ -1,16 +1,25 @@
 /* Shared designs for the Midnight Coder UI Library */
 :root {
-  --mc-purple: rgba(40, 0, 60, 1);
+  // --mc-purple: rgba(40, 0, 60, 1);
   --mc-aurora: rgba(0, 234, 141, 0.5);
   --mc-white: rgba(255, 255, 255, 0.5);
   --mc-shadow: rgba(0, 0, 0, 0.5);
   --mc-inner-card-bg: rgba(0, 0, 0, 0.5);
   --mc-shadow-card: rgba(80, 80, 80, 0.5);
-
+  --text-muted: rgba(224, 224, 224, 0.6);
   --mc-background: rgba(30, 30, 46, 1);
   --mc-background-card: rgba(61, 43, 69, 0.5);
 
   --mc-nav-border: rgba(0, 0, 0, 0.5);
+
+  --mc-violet: #A855F7;
+  --mc-purple: #A855F7;
+  --mc-ice-blue: #A5F2F3;
+  --mc-ice-shadow: #74C7D3;
+  --mc-pegion-black: #2C2C2C;
+  --midnight-bg: #0B0E14;
+  --beak-orange: #FF9D00;
+  --mc-bg-card: #1E1E2E;
 }
 
 /* Minimal reset shared by all components. */
