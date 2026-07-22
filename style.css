@@ -13,6 +13,7 @@
   --mc-ice-blue: #A5F2F3;
   --mc-ice-shadow: #74C7D3;
   --mc-pegion-black: #2C2C2C;
+  --text-muted: rgba(224, 224, 224, 0.6);
   --midnight-bg: #0B0E14;
   --beak-orange: #FF9D00;
 
@@ -262,4 +263,12 @@ body {
 
 
   }
+}
+
+.mug-filled {
+  color: var(--mc-violet);
+}
+
+.mug-empty {
+  color: var(--text-muted);
 }

@@ -1,4 +1,4 @@
-module Content.RockPaper.V1 exposing (view)
+module Content.TaskTracker.V1 exposing (view)
 
 import Content.Base exposing (baseComponent)
 import Html exposing (..)

@@ -2,6 +2,7 @@ module Content.Base exposing (baseComponent)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
+import Svg.Attributes
 import Icons as Icon
 
 {-| author: TuringProblem @14:57 20260719 -}
@@ -21,11 +22,13 @@ difficultyClass className =
 generateMugStars: Int -> Html msg
 generateMugStars stars =
   let
-    starsList = List.range 1 5 
-    starList = List.map (\x -> Icon.coffeeCupIcon []) starsList
+    starsList = List.range 1 5
+    mugClass index = if index <= stars then "mug-filled" else "mug-empty"
+    starList = List.map (\index -> Icon.coffeeCupIcon [ Svg.Attributes.class (mugClass index) ]) starsList
   in
     span [class "highlight"] starList
-  
+
+
 getDifficulty: BaseTypes msg -> Html msg
 getDifficulty baseTypes =
   let 

@@ -69,7 +69,13 @@ carouselItems : List (Carousel.Item msg)
 carouselItems =
 
     [ 
-      { link = "https://www.youtube.com/watch?v=kHnfim95aus"
+      { link = "https://www.youtube.com/watch?v=qOsVmVlBHSs"
+      , thumbnail = Just "https://i.ytimg.com/vi/qOsVmVlBHSs/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AHOBYACgAqKAgwIABABGGUgRihAMA8=&rs=AOn4CLDQGm3sPzVnl0tH2ZdxaOyx4-XeNg"
+      , subText = Just "About Me | Mike Glabay"
+      , style = Carousel.Video
+      , nonThumbnailContent = []
+      }
+    , { link = "https://www.youtube.com/watch?v=kHnfim95aus"
       , thumbnail = Just "https://i.ytimg.com/vi/kHnfim95aus/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAn_oDug8n5mDCkTKtavylgbS4vSA"
       , subText = Just "Git, how to save a production nightmare"
       , style = Carousel.Video
