@@ -171,13 +171,12 @@ body {
   flex: 1;
   min-width: 0;
   min-height: 0;
+  overflow-y: auto;
 }
 
 .pageContainer {
   padding: 0px 24px 0px 0px;
   flex: 1;
-  min-height: 0;
-  overflow-y: auto;
 }
 
 .siteFooter {
@@ -267,6 +266,16 @@ body {
 
 .mug-filled {
   color: var(--mc-violet);
+}
+
+
+.mainView {
+  display: flex;
+  gap: 1rem;
+  height: 100vh;
+
+  & div {
+  }
 }
 
 .mug-empty {

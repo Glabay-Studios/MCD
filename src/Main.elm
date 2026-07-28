@@ -1,12 +1,14 @@
 module Main exposing (main)
 
 import Browser
+import Browser.Dom as Dom
+import Task
 import Content
 import Html exposing (Html, a, div, text,  footer, span)
-import Html.Attributes exposing (class, href)
+import Html.Attributes exposing (class, href, id)
 import Navbar
 import Pages.Devlog.DevlogPage as DevlogPage
-import Pages.Home.HomePage as HomePage 
+import Pages.Home.HomePage as HomePage
 
 
 {-| @author: TuringProblem: 20260714 : 1847 |-}
@@ -63,7 +65,9 @@ update msg model =
             ( { model | navOpen = not model.navOpen }, Cmd.none )
 
         NavigateTo href ->
-            ( { model | page = pageFromHref href model.page }, Cmd.none )
+          ( { model | page = pageFromHref href model.page }
+          , Task.attempt (\_ -> NoOp) (Dom.setViewportOf "pageContainer" 0 0)
+          )
 
         NoOp ->
             ( model, Cmd.none )
@@ -108,6 +112,7 @@ viewPage model =
 
 
 
+-- TODO: Need to make sure, that when we click the navbar the state of the screen goes to the TOP
 view : Model -> Html Msg
 view model =
     div [ class "homePage" ]
@@ -118,10 +123,9 @@ view model =
                 , onNavigate = NavigateTo
                 , items = Content.navItems
                 }
-            , div [ class "contentArea" ]
+            , div [ class "contentArea", id "pageContainer" ]
                 [ viewPage model ]
             ]
         , viewFooter
         ]
-
 

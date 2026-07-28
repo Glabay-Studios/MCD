@@ -68,8 +68,19 @@ courseCarousel =
 carouselItems : List (Carousel.Item msg)
 carouselItems =
 
-    [ 
-      { link = "https://www.youtube.com/watch?v=qOsVmVlBHSs"
+    [ { link = "https://www.youtube.com/watch?v=vmnf_liGBY0"
+      , thumbnail = Just "https://i.ytimg.com/vi/vmnf_liGBY0/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGBMgYCh_MA8=&rs=AOn4CLBByMWzffwFEjRjNdZ0q4rRVIIJEw"
+      , subText = Just "Java Slow? Here's Why"
+      , style = Carousel.Video
+      , nonThumbnailContent = []
+      }
+    , { link = "https://www.youtube.com/watch?v=zxF3QTJ6Tes"
+    , thumbnail = Just "https://i.ytimg.com/vi/zxF3QTJ6Tes/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAysal-saORVZ389RWQk9ROX4iR3A"
+    , subText = Just "Docker Isn't as Complicated as You Think"
+    , style = Carousel.Video
+    , nonThumbnailContent = []
+    }
+    , { link = "https://www.youtube.com/watch?v=qOsVmVlBHSs"
       , thumbnail = Just "https://i.ytimg.com/vi/qOsVmVlBHSs/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AHOBYACgAqKAgwIABABGGUgRihAMA8=&rs=AOn4CLDQGm3sPzVnl0tH2ZdxaOyx4-XeNg"
       , subText = Just "About Me | Mike Glabay"
       , style = Carousel.Video
