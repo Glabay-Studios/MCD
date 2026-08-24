@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: '26'
       - name: Install elm
-        run: npm install --global elm
+        run: npm install --global elm@0.19.1
       - name: Fetch main
         run: |
           git fetch origin main
