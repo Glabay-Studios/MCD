@@ -46,7 +46,8 @@ jobs:
           cp index.html docs/;
           cp elm.js docs/;
           cp style.css docs/;
-          cp -r midnight-ui/*.css docs/;
+          cp -r midnight-ui docs/;
+          find docs/midnight-ui -type f ! -name "*.css" -delete
       - name: Force add generated file
         run: |
           git add -f docs/*
