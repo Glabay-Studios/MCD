@@ -40,8 +40,15 @@ jobs:
       - name: Compile with elm
         run: |
           ./compile.sh
+      - name: Make docs directory
+        run: |
+          mkdir docs;
+          cp index.html docs/;
+          cp elm.js docs/;
+          cp style.css docs/;
+          cp -r midnight-ui/*.css docs/;
       - name: Force add generated file
         run: |
-          git add -f elm.js
-          git commit -m "Merge main and add elm.js from Github CI" || echo "No changes to commit"
+          git add -f docs/*
+          git commit -m "Merge main and add docs/* from Github CI" || echo "No changes to commit"
           git push -f
