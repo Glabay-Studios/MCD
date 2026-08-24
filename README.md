@@ -18,3 +18,4 @@ If you would like to contribute to the website, please read the
 
 </details>
 
+Auto deploy with a pages workflow froma docs branch.
