@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: generated-docs
       - name: Set up Git
@@ -31,17 +31,17 @@ jobs:
       - name: Fetch main
         run: |
           git fetch origin main
-      - name: Rest score to main
+      - name: Reset generated-docs to main
         run: |
           git reset --hard origin/main
       - name: Merge main
         run: |
           git merge origin/main --no-edit
-      - name: Build with Gradle
+      - name: Compile with elm
         run: |
           ./compile.sh
       - name: Commit generated file
         run: |
-          git add docs/*
-          git commit -m "Merge main and add docs/* from Github CI" || echo "No changes to commit"
+          git add elm.js
+          git commit -m "Merge main and add elm.js from Github CI" || echo "No changes to commit"
           git push -f
