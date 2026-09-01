@@ -51,10 +51,7 @@ carousel variant direction items =
             in
             div [ class ("mc-carousel mc-carousel--infinite " ++ directionClass direction) ]
                 [ div
-                    [ class "mc-carousel__track"
-                    , style "animation-duration" duration
-                    ]
-                    (List.map viewItem (copy ++ copy))
+                    [ class "mc-carousel__track" , style "animation-duration" duration ] (List.map viewItem (copy ++ copy))
                 ]
 
 

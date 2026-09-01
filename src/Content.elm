@@ -68,12 +68,67 @@ courseCarousel =
 carouselItems : List (Carousel.Item msg)
 carouselItems =
 
-    [ { link = "https://www.youtube.com/watch?v=vmnf_liGBY0"
-      , thumbnail = Just "https://i.ytimg.com/vi/vmnf_liGBY0/hqdefault.jpg?sqp=-oaymwFBCNACELwBSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGBMgYCh_MA8=&rs=AOn4CLBByMWzffwFEjRjNdZ0q4rRVIIJEw"
-      , subText = Just "Java Slow? Here's Why"
-      , style = Carousel.Video
-      , nonThumbnailContent = []
-      }
+    [ 
+    { link = "https://www.youtube.com/watch?v=gLBzQwuEDBo"
+    , thumbnail = Just "https://i.ytimg.com/vi/gLBzQwuEDBo/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAVMvE6pDvSkzsRuwbYO-WY_1aAVw"
+    , subText = Just "Spring Modulith,;What You Need to Know to Stop Using Microservices"
+    , style = Carousel.Video
+    , nonThumbnailContent = []
+    }
+    , { link = "https://www.youtube.com/watch?v=3VyIO6AVUxQ&t=225s"
+    , thumbnail = Just "https://i.ytimg.com/vi/3VyIO6AVUxQ/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB70T6_p3ChRmvY0pUKftWdrU89wQ"
+    , subText = Just "Java Generics, Data Structures & the Mental Models Behind Them"
+    , style = Carousel.Video
+    , nonThumbnailContent = []
+    }
+    , { link = "https://www.youtube.com/watch?v=V8-SMLbKGw0"
+    , thumbnail = Just "https://i.ytimg.com/vi/V8-SMLbKGw0/hqdefault.jpg?sqp=-oaymwEnCOADEI4CSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDPxoRZ-9PaiP9KBUwh5kt09ARl2Q"
+    , subText = Just "Why You Struggle With DSA | The Modern Java Workflow"
+    , style = Carousel.Video
+    , nonThumbnailContent = []
+    }
+    , { link = "https://www.youtube.com/watch?v=_8OYV0RG5uM"
+    , thumbnail = Just "https://i.ytimg.com/vi/_8OYV0RG5uM/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDKJn2iwP1Eylue3dMRLcE3j1PCbA"
+    , subText = Just "Spring; why should I upgrade to Spring Boot 4.x"
+    , style = Carousel.Video
+    , nonThumbnailContent = []
+    }
+    , { link = "https://www.youtube.com/watch?v=EJSsDhxI5Jc"
+    , thumbnail = Just "https://i.ytimg.com/vi/EJSsDhxI5Jc/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLARtcIQfzfNDUjvejOGGvlQnQy4xQ"
+    , subText = Just "Java 25; Spring Boot Security - Crash Course"
+    , style = Carousel.Video
+    , nonThumbnailContent = []
+    }
+    , { link = "https://www.youtube.com/watch?v=Q-Xr-pbRG14"
+    , thumbnail = Just "https://i.ytimg.com/vi/Q-Xr-pbRG14/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAl7h9sgZK05Pi7IXPmFUr2B6uPKA"
+    , subText = Just "Modern Java Roadmap 2026: Zero to Pro"
+    , style = Carousel.Video
+    , nonThumbnailContent = []
+    }
+    , { link = "https://www.youtube.com/watch?v=TrB85pfNhck"
+    , thumbnail = Just "https://i.ytimg.com/vi/TrB85pfNhck/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLC6u29Qn7P4HScAktPSZH9HKd0STg"
+    , subText = Just "Why Your Spring Boot Project Isn't Production Ready"
+    , style = Carousel.Video
+    , nonThumbnailContent = []
+    }
+    , { link = "https://www.youtube.com/watch?v=i7Vy1bReX6g"
+    , thumbnail = Just "https://i.ytimg.com/vi/i7Vy1bReX6g/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCIDdHw2P-7Auwxa2kNi64D3yl8KA"
+    , subText = Just "Your Java App Has a Problem... It Can't Remember Anything"
+    , style = Carousel.Video
+    , nonThumbnailContent = []
+    }
+    ,{ link = "https://www.youtube.com/watch?v=zA3eLEJBEGo&t=18s"
+    , thumbnail = Just "https://i.ytimg.com/vi/zA3eLEJBEGo/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBoMN9cjLWYMzH-hvLRZYEwavxGpA"
+    , subText = Just "DSA in Java: The Only Roadmap You Need To Follow"
+    , style = Carousel.Video
+    , nonThumbnailContent = []
+    }
+    ,{ link = "https://www.youtube.com/watch?v=vmnf_liGBY0&t=214s"
+    , thumbnail = Just "https://i.ytimg.com/vi/vmnf_liGBY0/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCFMBJRw-BSuFgbgCebB6QP5E2jUg"
+    , subText = Just "Modern Java is about to change forever"
+    , style = Carousel.Video
+    , nonThumbnailContent = []
+    }
     , { link = "https://www.youtube.com/watch?v=zxF3QTJ6Tes"
     , thumbnail = Just "https://i.ytimg.com/vi/zxF3QTJ6Tes/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAysal-saORVZ389RWQk9ROX4iR3A"
     , subText = Just "Docker Isn't as Complicated as You Think"
