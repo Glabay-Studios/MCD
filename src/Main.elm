@@ -14,27 +14,18 @@ import Pages.Home.HomePage as HomePage
 {-| @author: TuringProblem: 20260714 : 1847 |-}
 
 
-type Page
-    = Home
-    | Devlog
-
-
+type Page = Home | Devlog
 type Theme = Light | Dark
-
+type Msg = NoOp
+    | ToggleTheme
+    | ToggleNav
+    | NavigateTo String
 
 type alias Model =
     { page : Page
     , theme : Theme
     , navOpen : Bool
     }
-
-
-type Msg
-    = NoOp
-    | ToggleTheme
-    | ToggleNav
-    | NavigateTo String
-
 
 main : Program () Model Msg
 main =
@@ -50,8 +41,7 @@ update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         ToggleTheme ->
-            let
-                newTheme =
+            let newTheme =
                     case model.theme of
                         Light ->
                             Dark
@@ -76,14 +66,9 @@ update msg model =
 pageFromHref : String -> Page -> Page
 pageFromHref href current =
     case href of
-        "#home" ->
-            Home
-
-        "#devlog" ->
-            Devlog
-
-        _ ->
-            current
+        "#home" -> Home
+        "#devlog" -> Devlog
+        _ -> current
 
 
 
@@ -104,11 +89,8 @@ viewFooter =
 viewPage : Model -> Html Msg
 viewPage model =
     case model.page of
-        Home ->
-            HomePage.view
-
-        Devlog ->
-            DevlogPage.view
+        Home -> HomePage.view
+        Devlog -> DevlogPage.view
 
 
 

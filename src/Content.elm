@@ -69,7 +69,25 @@ carouselItems : List (Carousel.Item msg)
 carouselItems =
 
     [ 
-    { link = "https://www.youtube.com/watch?v=gLBzQwuEDBo"
+    { link = ""
+    , thumbnail = Just ""
+    , subText = Just ""
+    , style = Carousel.Video
+    , nonThumbnailContent = []
+    }
+    , { link = ""
+    , thumbnail = Just ""
+    , subText = Just ""
+    , style = Carousel.Video
+    , nonThumbnailContent = []
+    }
+    , { link = ""
+    , thumbnail = Just ""
+    , subText = Just ""
+    , style = Carousel.Video
+    , nonThumbnailContent = []
+    }
+    , { link = "https://www.youtube.com/watch?v=gLBzQwuEDBo"
     , thumbnail = Just "https://i.ytimg.com/vi/gLBzQwuEDBo/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAVMvE6pDvSkzsRuwbYO-WY_1aAVw"
     , subText = Just "Spring Modulith,;What You Need to Know to Stop Using Microservices"
     , style = Carousel.Video
