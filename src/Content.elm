@@ -69,21 +69,39 @@ carouselItems : List (Carousel.Item msg)
 carouselItems =
 
     [ 
-    { link = ""
-    , thumbnail = Just ""
-    , subText = Just ""
+    { link = "https://www.youtube.com/watch?v=za_d9jtVagw&t=276s"
+    , thumbnail = Just "https://i.ytimg.com/vi/za_d9jtVagw/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAMn5WVeTu9lXr-DcmJ--qBKF5CWA"
+    , subText = Just "Master Docker Compose in One Shot"
     , style = Carousel.Video
     , nonThumbnailContent = []
     }
-    , { link = ""
-    , thumbnail = Just ""
-    , subText = Just ""
+    , { link = "https://www.youtube.com/watch?v=Ay6KmQzv-uw&t=158s"
+    , thumbnail = Just "https://i.ytimg.com/vi/Ay6KmQzv-uw/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCX7pdk7xhBKiFDOqWWJG2P4CbLPA"
+    , subText = Just "is JDK 27 Worth It? 0 JEPs You Need To See"
     , style = Carousel.Video
     , nonThumbnailContent = []
     }
-    , { link = ""
-    , thumbnail = Just ""
-    , subText = Just ""
+    , { link = "https://www.youtube.com/watch?v=9YjLjgE1x4o"
+    , thumbnail = Just "https://i.ytimg.com/vi/9YjLjgE1x4o/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCrY-NZOkKI-gIAxRVecO_yZ5z5ow"
+    , subText = Just "Demystifying Spring Boot: How It Really Works Behind the Scenes"
+    , style = Carousel.Video
+    , nonThumbnailContent = []
+    }
+    , { link = "https://www.youtube.com/watch?v=asG_I4UHsQg&t=263s&pp=0gcJCS8MAYcqIYzv"
+    , thumbnail = Just "https://i.ytimg.com/vi/asG_I4UHsQg/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBOho3TlpLUnGpM1s-2khTU3ux_yA"
+    , subText = Just "Microservices explained through the reference to Windows"
+    , style = Carousel.Video
+    , nonThumbnailContent = []
+    }
+    , { link = "https://www.youtube.com/watch?v=9ly7Mdw42gM&t=142s"
+    , thumbnail = Just "https://i.ytimg.com/vi/9ly7Mdw42gM/hq720.jpg?sqp=-oaymwFBCNAFEJQDSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AH-CYAC0AWKAgwIABABGFMgSihlMA8=&rs=AOn4CLBQFivqU3Tj9SIns5NvA9sa3aiJrw"
+    , subText = Just "I Built These Before I Knew How To Code"
+    , style = Carousel.Video
+    , nonThumbnailContent = []
+    }
+    , { link = "https://www.youtube.com/watch?v=CQAZZ0IZoUQ"
+    , thumbnail = Just "https://i.ytimg.com/vi/CQAZZ0IZoUQ/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBnahjVwO-NE3TSUJwxwu8TfFdoRQ"
+    , subText = Just "Spring Security OAuth 2.0: The Only Guide You Need"
     , style = Carousel.Video
     , nonThumbnailContent = []
     }
